@@ -6,6 +6,7 @@ var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "S
 const Header = () => {
   return (
     <div>
+      
       <h1>The New York Times</h1>
       <p className="date"> {days[date.getDay()]}, {months[date.getMonth()]} {date.getDate()}, {date.getFullYear()}</p>
     </div>

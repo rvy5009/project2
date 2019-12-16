@@ -6,6 +6,7 @@ import { Route, Link } from "react-router-dom"
 import Finance from "./components/finance"
 import World from "./components/world"
 import Header from "./components/header"
+import Search from "./components/search"
 
 class App extends React.Component {
   constructor() {
@@ -22,21 +23,26 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        
         <Header />
         
         <div className="navDiv">
           <nav>
+            <Link to="/search">Serach</Link>
             <Link to="/">HomePage</Link>
             <Link to="/sports">Sports</Link>
             <Link to="/finance">Finance</Link>
             <Link to="/world">World</Link>
+            
           </nav>
         </div>
         <main>
+          
           <Route exact path="/" render={() => <MainPage/>}/ >
           <Route path="/sports" render={() => <Sports/>}/ >
           <Route path="/finance" render={() => <Finance/>}/ >
-          <Route path="/world" render={() =><World />}/>
+          <Route path="/world" render={() => <World />} />
+          <Route path="/search" render={() => <Search />} />
         </main>
         
 

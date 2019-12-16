@@ -20,29 +20,44 @@ class MainPage extends React.Component {
   }
 
   render() {
-    console.log(this.state.articles)
+    // console.log(this.state.articles)
     return (
-      <div className="outer">
-        <div className=" innerOne">
-          {this.state.articles.slice(0,1).map((article, key) =>
-            <div className="articleWPic" key={key}>
-              <div className="artOne">
-                <a href={article.url} >{article.title}</a>
-                <p className = "bullet">{article.description}</p>
-              </div>
-              <img className = "imgMain" src={article.urlToImage} alt="pictured"/>
-            </div>  
+      <div>
+        <div className="outer">
+          <div className=" inner1">
+            {this.state.articles.slice(0,1).map((article, key) =>
+              <div className="articleWPic" key={key}>
+                <div className="art1">
+                  <a className="title" href={article.url} >{article.title}</a>
+                  <p className = "bullet">{article.description}</p>
+                </div>
+                <img className = "imgMain" src={article.urlToImage} alt="pictured"/>
+              </div>  
             )}
-        </div>
+          </div>
 
-        <div className=" innerTwo">
-        {this.state.articles.slice(1,2).map((article, key) =>
-          <div className="articleWord" key={key}>
-           <a href={article.url} >{article.title}</a>
-           <p>{article.description}</p>
-          </div>  
+          <div className=" inner2">
+          {this.state.articles.slice(1,2).map((article, key) =>
+            <div className="articleWord" key={key}>
+              <a className="title" href={article.url} >{article.title}</a>
+              <p>{article.description}</p>
+            </div>  
           )}    
-        </div>  
+          </div>  
+
+          </div>
+          <div className=" inner3">
+          {this.state.articles.slice(7,8).map((article, key) =>
+            <div className="article3Word" key={key}>
+              <div className= "inner3Text">
+                <a className="title" href={article.url} >{article.title}</a>
+                <p>{article.description}</p>
+              </div>
+              <img className = "img3Main" src={article.urlToImage} alt="pictured"/>
+            </div>  
+          )}  
+          
+          </div>  
       </div>
     )
   }

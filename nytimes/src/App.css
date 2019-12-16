@@ -1,7 +1,3 @@
-.imgMain{
-  width:50%;
-  margin: 10px;
-}
 .articleWPic{
   display: flex;
   flex-direction: row;
@@ -13,7 +9,9 @@
 .outer{
 display: grid;
 grid-template-columns: 75% 25%;
-
+border-bottom: 1px solid black;
+border-color: rgba(0, 0, 0, 0.1);
+margin:10px;
 }
 h1{
   text-align: center;
@@ -37,9 +35,13 @@ a{
 .navDiv{
   border-bottom: 1px solid black;
   margin: 10px
-
 }
-.innerOne{
+
+.imgMain{
+  width:40vw;
+  margin: 10px;
+}
+.inner1{
   display: flex;
   flex-direction: row;
 }
@@ -58,16 +60,34 @@ a{
 }
 .outerPage{
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 65% 35%;
   margin: 10px;
 }
-.imgPage{
-  width:90%
+.title{
+  font-weight: bold;
+}
+.img3Main{
+  width: 60vw;
+}
+.inner3{
+  margin: 10px
 }
 h2{
   text-align: center;
 }
-.artOnePage{
+.article3Word{
+  display: flex;
+  flex-direction: row;
+  margin:10px;
+}
+.inner3Text{
+  margin: 10px
+}
+
+
+
+
+.art1Page{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,17 +95,67 @@ h2{
 }
 .titlePage{
   font-weight: bold;
+  text-align: center;
 }
 .bulletPage{
   width: 350px;
   text-align: center;
 }
-.innerTwoPage{
+.inner2Page{
   display:flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
+.imgPage{
+  display: flex;
+  width: 55vw;
+  height: 40vw;
+}
+
 .img2Page{
   float:right;
-  width:30%;
+  width:  15vw;
+  height: 20vh
+}
+.articleWPicPage{
+  border-right: 1px solid black;
+  border-color: rgba(0, 0, 0, 0.1);
+  margin: 10px
+}
+.articleWordPage{
+  border-bottom: 1px solid black;
+  border-color: rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 10px;
+  justify-content: flex-start;
+}
+.title2Page{
+  font-weight: bold;
+  font-size: 15px;
+}
+.h2Page{
+  border-bottom: 1px solid black;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.authorPage{
+  font-size: 10px;
+  color:grey;
+}
+.inner3Page{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.img3Page{
+  width: 15vw;
+  height: 25vh;
+}
+.articleWordPicPage{
+  margin: 10px;
+  border-right: 1px solid black;
+  border-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
