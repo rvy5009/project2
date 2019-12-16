@@ -16,6 +16,7 @@ class Search extends React.Component{
     this.setState({
       news:newData
     })
+    this.props.onSearch();
   }
   handleChange = (e) => {
     this.setState({
@@ -26,6 +27,7 @@ class Search extends React.Component{
     console.log(this.state.news)
     return (
       <div>
+      
       <form onSubmit={this.onSubmit} >
         <input type="text" placeholder="search News" onChange={this.handleChange}/>
         <input type="submit"/>
@@ -33,12 +35,15 @@ class Search extends React.Component{
 
 
       </form>
-        
-        {this.state.news.map((article, key) =>
-          <div key= {key}>
-            {article.title}
+        {this.props.searched &&
+        <div>
+          {this.state.news.map((article, key) =>
+              <div key={key}>
+                {article.title}
+              </div>
+            )}
           </div>
-      )}  
+        }
       </div>
     )
   }

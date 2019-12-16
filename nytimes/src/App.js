@@ -7,44 +7,53 @@ import Finance from "./components/finance"
 import World from "./components/world"
 import Header from "./components/header"
 import Search from "./components/search"
-
 class App extends React.Component {
   constructor() {
     super()
     this.state = {
-
+      searchPage: false
     }
   }
 
-  componentDidMount(){
-    return(<MainPage/>)
+  componentDidMount() {
+    return (<MainPage />)
+  }
+
+  onSearch = () => {
+    this.setState({
+      searchPage:true
+    })
+  }
+  onFalseClick= () => {
+    this.setState({
+      searchPage:false
+    })
   }
 
   render() {
     return (
       <div className="App">
-        
+
         <Header />
-        
+
         <div className="navDiv">
           <nav>
-            <Link to="/search">Serach</Link>
-            <Link to="/">HomePage</Link>
-            <Link to="/sports">Sports</Link>
-            <Link to="/finance">Finance</Link>
-            <Link to="/world">World</Link>
-            
+            <Search onSearch={this.onSearch} searched={this.state.searchPage}/>
+            <Link to="/" onClick={this.onFalseClick}>HomePage</Link>
+            <Link to="/sports" onClick={this.onFalseClick}>Sports</Link>
+            <Link to="/finance" onClick={this.onFalseClick}>Finance</Link>
+            <Link to="/world" onClick={this.onFalseClick}>World</Link>
+
           </nav>
         </div>
         <main>
-          
-          <Route exact path="/" render={() => <MainPage/>}/ >
-          <Route path="/sports" render={() => <Sports/>}/ >
-          <Route path="/finance" render={() => <Finance/>}/ >
-          <Route path="/world" render={() => <World />} />
-          <Route path="/search" render={() => <Search />} />
+
+          <Route exact path="/" render={() => <MainPage search={this.state.searchPage} />} />
+          <Route path="/sports" render={() => <Sports search={this.state.searchPage}/>} />
+          <Route path="/finance" render={() => <Finance search={this.state.searchPage}/>} />
+          <Route path="/world" render={() => <World search={this.state.searchPage}/>} />
         </main>
-        
+
 
       </div>
     );
