@@ -1,4 +1,14 @@
 img{
-  width:40%;
+  width:80%;
   margin: 5px;
+}
+.articleWPic{
+  display: flex;
+  flex-direction: column;
+  width: 300px
+}
+.outer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
