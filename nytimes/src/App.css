@@ -1,4 +1,4 @@
-img{
+.imgMain{
   width:50%;
   margin: 10px;
 }
@@ -55,4 +55,37 @@ a{
 .bullet{
   display: list-item;
   list-style-type: disc;
+}
+.outerPage{
+  display: grid;
+  grid-template-columns: 75% 25%;
+  margin: 10px;
+}
+.imgPage{
+  width:90%
+}
+h2{
+  text-align: center;
+}
+.artOnePage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.titlePage{
+  font-weight: bold;
+}
+.bulletPage{
+  width: 350px;
+  text-align: center;
+}
+.innerTwoPage{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.img2Page{
+  float:right;
+  width:30%;
 }

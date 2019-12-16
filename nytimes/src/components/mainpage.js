@@ -30,7 +30,7 @@ class MainPage extends React.Component {
                 <a href={article.url} >{article.title}</a>
                 <p className = "bullet">{article.description}</p>
               </div>
-              <img src={article.urlToImage} alt="pictured"/>
+              <img className = "imgMain" src={article.urlToImage} alt="pictured"/>
             </div>  
             )}
         </div>
