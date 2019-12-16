@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div>
       <h1>The New York Times</h1>
-      <p>{days[date.getDay()]}, {months[date.getMonth()]} {date.getDate()}, {date.getFullYear()}</p>
+      <p className="date"> {days[date.getDay()]}, {months[date.getMonth()]} {date.getDate()}, {date.getFullYear()}</p>
     </div>
   )
 }

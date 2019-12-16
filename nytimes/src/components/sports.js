@@ -1,7 +1,8 @@
 import React from "react"
 
 const Sports = (props) => {
-  return(
+  return (
+    
     <div>this is my sports page</div>
   )
 }

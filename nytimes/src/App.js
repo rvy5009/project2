@@ -22,13 +22,16 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header/>
-        <nav>
-          <Link to="/">HomePage</Link>
-          <Link to="/sports">Sports</Link>
-          <Link to="/finance">Finace</Link>
-          <Link to="/world">World</Link>
-        </nav>
+        <Header />
+        
+        <div className="navDiv">
+          <nav>
+            <Link to="/">HomePage</Link>
+            <Link to="/sports">Sports</Link>
+            <Link to="/finance">Finance</Link>
+            <Link to="/world">World</Link>
+          </nav>
+        </div>
         <main>
           <Route exact path="/" render={() => <MainPage/>}/ >
           <Route path="/sports" render={() => <Sports/>}/ >

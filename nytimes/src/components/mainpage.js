@@ -20,15 +20,29 @@ class MainPage extends React.Component {
   }
 
   render() {
+    console.log(this.state.articles)
     return (
-      <div className ="outer">
-        {this.state.articles.slice(0,2).map((article, key) =>
-          <div className="articleWPic">
-            <img src={article.urlToImage}/>
+      <div className="outer">
+        <div className=" innerOne">
+          {this.state.articles.slice(0,1).map((article, key) =>
+            <div className="articleWPic" key={key}>
+              <div className="artOne">
+                <a href={article.url} >{article.title}</a>
+                <p className = "bullet">{article.description}</p>
+              </div>
+              <img src={article.urlToImage} alt="pictured"/>
+            </div>  
+            )}
+        </div>
+
+        <div className=" innerTwo">
+        {this.state.articles.slice(1,2).map((article, key) =>
+          <div className="articleWord" key={key}>
            <a href={article.url} >{article.title}</a>
            <p>{article.description}</p>
           </div>  
-        )}
+          )}    
+        </div>  
       </div>
     )
   }
