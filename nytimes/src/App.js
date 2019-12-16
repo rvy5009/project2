@@ -5,6 +5,7 @@ import Sports from "./components/sports"
 import { Route, Link } from "react-router-dom"
 import Finance from "./components/finance"
 import World from "./components/world"
+import Header from "./components/header"
 
 class App extends React.Component {
   constructor() {
@@ -21,6 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Header/>
         <nav>
           <Link to="/">HomePage</Link>
           <Link to="/sports">Sports</Link>
