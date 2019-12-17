@@ -48,7 +48,8 @@ class App extends React.Component {
 
           </nav>
         </div>
-        <Daily search={this.state.searchPage}/>
+        <Daily search={this.state.searchPage} />
+        
         <main>
 
           <Route exact path="/" render={() => <MainPage search={this.state.searchPage} />} />
