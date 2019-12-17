@@ -42,11 +42,10 @@ class Sports extends React.Component {
                 <div className=" inner2Page">
                 {this.state.articles.slice(1, 4).map((article, key) =>
                   <div className="articleWordPage" key={key}>
-                    
+                    {article.urlToImage && <img className="img2Page" src={article.urlToImage} alt="pictured" />}
                     <a className="title2Page" href={article.url} target="_blank"
                         rel="noopener noreferrer">{article.title}</a>
                     {article.author && <p className="authorPage">By {article.author}</p>}
-                    {article.urlToImage && <img className="img2Page" src={article.urlToImage} alt="pictured" />}
                   </div>
                 )}
                 </div>
