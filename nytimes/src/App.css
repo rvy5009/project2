@@ -45,6 +45,7 @@ a{
 .imgMain{
   width:40vw;
   margin: 10px;
+  object-fit: cover;
 }
 .inner1{
   display: flex;
@@ -73,6 +74,7 @@ a{
 }
 .img3Main{
   width: 60vw;
+  object-fit: cover;
 }
 .inner3{
   margin: 10px
@@ -115,12 +117,14 @@ h2{
   display: flex;
   width: 55vw;
   height: 40vw;
+  object-fit: cover;
 }
 
 .img2Page{
   float:right;
   width:  10vw;
-  height: 15vh
+  height: 13vh;
+  object-fit: cover;
 }
 .articleWPicPage{
   border-right: 1px solid black;
@@ -139,6 +143,7 @@ h2{
 .title2Page{
   font-weight: bold;
   font-size: 15px;
+  text-align: center;
 }
 .h2Page{
   border-bottom: 1px solid black;
@@ -156,11 +161,13 @@ h2{
   border-color: rgba(0, 0, 0, 0.1);
 }
 .img3Page{
-  width: 12vw;
-  height: 17vh;
+  width: 15vw;
+  height: 15vh;
+  object-fit: cover;
 }
 .articleWordPicPage{
-  margin: 10px;
+  margin: 5px;
+  padding: 10px;
   border-right: 1px solid black;
   border-color: rgba(0, 0, 0, 0.1);
   display: flex;
@@ -205,6 +212,7 @@ h2{
   border-left: 1px solid black;
   border-color: rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  object-fit: cover;
 }
 
 

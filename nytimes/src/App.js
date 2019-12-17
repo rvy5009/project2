@@ -8,14 +8,31 @@ import World from "./components/world"
 import Header from "./components/header"
 import Search from "./components/search"
 import Daily from './components/daily'
+import RenderSearch from "./components/rendersearch"
+import { search } from "./services/api"
 class App extends React.Component {
   constructor() {
     super()
     this.state = {
+      input: '',
+      news: [],
       searchPage: false
     }
   }
-
+  onSubmit = async (e) => {
+    e.preventDefault()
+    const data = await search(this.state.input)
+    const newData = data.data.articles
+    this.setState({
+      news:newData
+    })
+    this.onSearch();
+  }
+  handleChange = (e) => {
+    this.setState({
+      input: e.target.value
+    })
+  }
   componentDidMount() {
     return (<MainPage />)
   }
@@ -40,7 +57,10 @@ class App extends React.Component {
 
         <div className="navDiv">
           <nav>
-            <Search onSearch={this.onSearch} searched={this.state.searchPage}/>
+            <Search onSearch={this.onSearch}
+              onSubmit={this.onSubmit}
+              handleChange={this.handleChange}
+              searched={this.state.searchPage} />
             <Link to="/" onClick={this.onFalseClick}>HomePage</Link>
             <Link to="/sports" onClick={this.onFalseClick}>Sports</Link>
             <Link to="/finance" onClick={this.onFalseClick}>Finance</Link>
@@ -49,7 +69,10 @@ class App extends React.Component {
           </nav>
         </div>
         <Daily search={this.state.searchPage} />
-        
+        <RenderSearch
+          searched={this.state.searchPage}
+          news={this.state.news}
+        />
         <main>
 
           <Route exact path="/" render={() => <MainPage search={this.state.searchPage} />} />

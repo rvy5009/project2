@@ -29,9 +29,10 @@ class Sports extends React.Component {
               <div className=" inner1Page">
               {this.state.articles.slice(0, 1).map((article, key) =>
                 <div className="articleWPicPage" key={key}>
-                  <img className="imgPage" src={article.urlToImage} alt="pictured" />
+                  {article.urlToImage && <img className="imgPage" src={article.urlToImage} alt="pictured" />}
                   <div className="art1Page">
-                    <a className="titlePage" href={article.url} >{article.title}</a>
+                    <a className="titlePage" href={article.url} target="_blank"
+                        rel="noopener noreferrer" >{article.title}</a>
                     <p className="bulletPage">{article.content}</p>
                   </div>
 
@@ -41,9 +42,11 @@ class Sports extends React.Component {
                 <div className=" inner2Page">
                 {this.state.articles.slice(1, 4).map((article, key) =>
                   <div className="articleWordPage" key={key}>
+                    
+                    <a className="title2Page" href={article.url} target="_blank"
+                        rel="noopener noreferrer">{article.title}</a>
+                    {article.author && <p className="authorPage">By {article.author}</p>}
                     {article.urlToImage && <img className="img2Page" src={article.urlToImage} alt="pictured" />}
-                    <a className="title2Page" href={article.url} >{article.title}</a>
-                    <p className="authorPage">By {article.author}</p>
                   </div>
                 )}
                 </div>
@@ -53,7 +56,8 @@ class Sports extends React.Component {
               {this.state.articles.slice(5, 10).map((article, key) =>
                 <div className="articleWordPicPage" key={key}>
                   {article.urlToImage && <img className="img3Page" src={article.urlToImage} alt="pictured" />}
-                  <a className="title2Page" href={article.url} >{article.title}</a>
+                  <a className="title2Page" href={article.url} target="_blank"
+                        rel="noopener noreferrer">{article.title}</a>
             
                 </div>
               )}
