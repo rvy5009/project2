@@ -7,6 +7,7 @@ import Finance from "./components/finance"
 import World from "./components/world"
 import Header from "./components/header"
 import Search from "./components/search"
+import Daily from './components/daily'
 class App extends React.Component {
   constructor() {
     super()
@@ -35,6 +36,7 @@ class App extends React.Component {
       <div className="App">
 
         <Header />
+        
 
         <div className="navDiv">
           <nav>
@@ -46,6 +48,7 @@ class App extends React.Component {
 
           </nav>
         </div>
+        <Daily search={this.state.searchPage}/>
         <main>
 
           <Route exact path="/" render={() => <MainPage search={this.state.searchPage} />} />

@@ -39,7 +39,11 @@ class Search extends React.Component{
         <div>
           {this.state.news.map((article, key) =>
               <div key={key}>
+                <div>
                 {article.title}
+                {article.description}
+                </div>
+                {article.urlToImage && <img className="img2Page" src={article.urlToImage} alt="pictured" />}
               </div>
             )}
           </div>
