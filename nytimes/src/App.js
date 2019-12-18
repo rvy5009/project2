@@ -27,7 +27,7 @@ class App extends React.Component {
     const data = await search(this.state.input)
     const newData = data.data.articles
     this.setState({
-      news:newData
+      news: newData
     })
     this.onSearch();
   }
@@ -42,12 +42,12 @@ class App extends React.Component {
 
   onSearch = () => {
     this.setState({
-      searchPage:true
+      searchPage: true
     })
   }
-  onFalseClick= () => {
+  onFalseClick = () => {
     this.setState({
-      searchPage:false
+      searchPage: false
     })
   }
   // got code from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
@@ -60,22 +60,17 @@ class App extends React.Component {
     }
   }
   mouseOut() {
-    let mice = document.getElementById("topnav")
+    let mice = document.getElementById("myLinks")
     mice.style.display = "none"
   }
-  mouseEnter() {
-    let mice = document.getElementById("topnav")
-    mice.style.display = "block"    
-  }
-
-
   render() {
     return (
       <div className="App">
         <Header />
         <div className="navDiv">
+
           <nav>
-            <Hamburger myFunction={this.myFunction} onMouseEnter={this.mouseEnter}/>
+            <Hamburger myFunction={this.myFunction} onMouseEnter={this.mouseEnter} />
             <Search onSearch={this.onSearch}
               onSubmit={this.onSubmit}
               handleChange={this.handleChange}
@@ -85,20 +80,18 @@ class App extends React.Component {
             <Link to="/finance" onClick={this.onFalseClick}>Finance</Link>
             <Link to="/world" onClick={this.onFalseClick}>World</Link>
           </nav>
-          <div className="topnav" id="topnav" onMouseLeave={this.mouseOut}
-          >
-      
+
+          <div className="topnav" id="topnav" onMouseLeave={this.mouseOut}>
             <div id="myLinks" onChange={this.handler}>
-
-
-              <a href="/" className="active">Homepage</a>        
+              <a href="/" className="active">Homepage</a>
               <a href="/sports">Sports</a>
               <a href="/finance">Finance</a>
               <a href="/world">World</a>
             </div>
-
           </div>
+
         </div>
+
         <Daily search={this.state.searchPage} />
         <RenderSearch
           searched={this.state.searchPage}
@@ -107,11 +100,10 @@ class App extends React.Component {
         <main>
 
           <Route exact path="/" render={() => <MainPage search={this.state.searchPage} />} />
-          <Route path="/sports" render={() => <Sports search={this.state.searchPage}/>} />
-          <Route path="/finance" render={() => <Finance search={this.state.searchPage}/>} />
-          <Route path="/world" render={() => <World search={this.state.searchPage}/>} />
+          <Route path="/sports" render={() => <Sports search={this.state.searchPage} />} />
+          <Route path="/finance" render={() => <Finance search={this.state.searchPage} />} />
+          <Route path="/world" render={() => <World search={this.state.searchPage} />} />
         </main>
-
 
       </div>
     );
