@@ -4,7 +4,7 @@ class Hamburger extends React.Component{
   render() {
     return (
       <div>
-        <a href="#" className="icon" onClick={this.props.myFunction}>
+        <a href="#nowhere" className="icon" onClick={this.props.myFunction}>
         <i className="fa fa-bars"></i>
         </a>
       </div>

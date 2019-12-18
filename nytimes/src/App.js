@@ -76,7 +76,7 @@ class App extends React.Component {
             <Link to="/finance" onClick={this.onFalseClick}>Finance</Link>
             <Link to="/world" onClick={this.onFalseClick}>World</Link>
           </nav>
-          <div class="topnav">
+          <div className="topnav">
       
             <div id="myLinks">
               <a href="/" className="active">Homepage</a>        
