@@ -1,3 +1,6 @@
+body{
+  font-family: 'georgia'
+}
 .articleWPic{
   display: flex;
   flex-direction: row;
@@ -28,13 +31,17 @@ h1{
   border-color: rgba(0, 0, 0, 0.1);
   padding:0 0 10px 0;
   margin: 10px;
-  height: 3vh
+  height: 3vh;
+  font-family: 'Arial'
 }
 nav{
   display: flex;
   justify-content: space-around;
   padding:0 0 8px 0;
   height: 2.5vh;
+}
+nav > a:hover{
+  background-color: rgba(0, 0, 0, 0.05);
 }
 a{
   text-decoration: none;
