@@ -24,9 +24,7 @@ class App extends React.Component {
   }
   onSubmit = async (e) => {
     e.preventDefault()
-    console.log(this.state.input)
     const data = await search(this.state.input)
-    console.log(data)
     const newData = data.data.articles
     this.setState({
       news:newData
@@ -63,7 +61,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.news)
     return (
       <div className="App">
         <Header />

@@ -6,7 +6,6 @@ let sports = "sports"
 let apiUrl = `https://newsapi.org/v2/everything?domains=nytimes.com&apiKey=dd76a03ead794c4e9e9f4c39be2b286e`
 let apiSports = `https://newsapi.org/v2/top-headlines?country=us&domains=nytimes.com&category=${sports}&apiKey=dd76a03ead794c4e9e9f4c39be2b286e`
 let apiDaily = `https://newsapi.org/v2/everything?q=daily&from=2019-11-30&sortBy=publishedAt&apiKey=dd76a03ead794c4e9e9f4c39be2b286e`
-let apiSearch = "https://newsapi.org/v2/everything?q=bitcoin&from=2019-11-18&sortBy=publishedAt&apiKey=dd76a03ead794c4e9e9f4c39be2b286e"
 
 
 export const fetchMain = async () => {

@@ -10,7 +10,6 @@ class RenderSearch extends React.Component{
   render() {
     return (
       <div className="searchDiv">
-      
         {this.props.searched &&
           <div className="outerSearch">
             {this.props.news.map((article, key) =>
