@@ -62,10 +62,11 @@ class App extends React.Component {
       <div className="App">
 
         <Header />
-        <Hamburger myFunction={this.myFunction}/>
+        
 
         <div className="navDiv">
           <nav>
+            <Hamburger myFunction={this.myFunction}/>
             <Search onSearch={this.onSearch}
               onSubmit={this.onSubmit}
               handleChange={this.handleChange}
@@ -76,6 +77,16 @@ class App extends React.Component {
             <Link to="/world" onClick={this.onFalseClick}>World</Link>
 
           </nav>
+          <div class="topnav">
+      
+      <div id="myLinks">
+        <a href="/" class="active">Homepage</a>        
+        <a href="/sports">Sports</a>
+        <a href="/finance">Finance</a>
+        <a href="/world">World</a>
+      </div>
+
+      </div>
         </div>
         <Daily search={this.state.searchPage} />
         <RenderSearch
