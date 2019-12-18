@@ -17,6 +17,8 @@ h1{
   border-bottom: 1px solid black;
   border-color: rgba(0, 0, 0, 0.1);
   margin: 10px;
+  font-family: 'chomsky'
+
 }
 .date{
   display: flex;
@@ -229,14 +231,36 @@ h2{
 
 
 .search{
-  padding:20px
+  padding:20px;
 }
 .outerSearch{
   width:90vw;
   display:flex;
   flex-direction: column;
+  padding: 20px;
  
+}
+.innerSearch{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  height: 55vh;
+  margin: 10px;
+  padding:10px;
+  border-top:1px solid black;
+  border-color: rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
 }
 .searchTitle{
   font-weight: bold;
+}
+.imgSearch{
+  width: 30vw;
+  height: 40vh;
+  object-fit: cover;
+}
+.searchDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

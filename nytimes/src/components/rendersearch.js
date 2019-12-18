@@ -9,12 +9,12 @@ class RenderSearch extends React.Component{
   }
   render() {
     return (
-      <div>
+      <div className="searchDiv">
       
         {this.props.searched &&
           <div className="outerSearch">
             {this.props.news.map((article, key) =>
-              <div className="innerSerach" key={key}>
+              <div className="innerSearch" key={key}>
                 <div className="search">
                   <a
                     className="title"
@@ -22,11 +22,11 @@ class RenderSearch extends React.Component{
                     target="_blank"
                     rel="noopener noreferrer" >
                     {article.title}
-                  </a>
-                  
+                  </a><br></br>
+                {article.description}  
                 </div>
-                {article.description}
-                {article.urlToImage && <img className="img2Page" src={article.urlToImage} alt="pictured" />}
+                
+                {article.urlToImage && <img className="imgSearch" src={article.urlToImage} alt="pictured" />}
               </div>
             )}
           </div>
