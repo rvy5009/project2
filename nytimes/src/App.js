@@ -59,6 +59,15 @@ class App extends React.Component {
       x.style.display = "block";
     }
   }
+  mouseOut() {
+    let mice = document.getElementById("topnav")
+    mice.style.display = "none"
+  }
+  mouseEnter() {
+    let mice = document.getElementById("topnav")
+    mice.style.display = "block"    
+  }
+
 
   render() {
     return (
@@ -66,7 +75,7 @@ class App extends React.Component {
         <Header />
         <div className="navDiv">
           <nav>
-            <Hamburger myFunction={this.myFunction}/>
+            <Hamburger myFunction={this.myFunction} onMouseEnter={this.mouseEnter}/>
             <Search onSearch={this.onSearch}
               onSubmit={this.onSubmit}
               handleChange={this.handleChange}
@@ -76,9 +85,12 @@ class App extends React.Component {
             <Link to="/finance" onClick={this.onFalseClick}>Finance</Link>
             <Link to="/world" onClick={this.onFalseClick}>World</Link>
           </nav>
-          <div className="topnav">
+          <div className="topnav" id="topnav" onMouseLeave={this.mouseOut}
+          >
       
-            <div id="myLinks">
+            <div id="myLinks" onChange={this.handler}>
+
+
               <a href="/" className="active">Homepage</a>        
               <a href="/sports">Sports</a>
               <a href="/finance">Finance</a>

@@ -30,8 +30,7 @@ class Daily extends React.Component {
                 <div className="articleWPicDaily" key={key}>
                   <img className="imgDaily" src={article.urlToImage} alt="pictured" />
                   <div className="art1Daily">
-                    <a className="titleDaily" href={article.url} >{article.title}</a>
-                    
+                    <a className="titleDaily" href={article.url} >{article.title}</a>  
                   </div>
                 </div>
               )}
