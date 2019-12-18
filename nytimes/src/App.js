@@ -11,6 +11,8 @@ import Daily from './components/daily'
 import RenderSearch from "./components/rendersearch"
 import { search } from "./services/api"
 import Hamburger from './components/hamburger';
+
+
 class App extends React.Component {
   constructor() {
     super()
@@ -22,7 +24,9 @@ class App extends React.Component {
   }
   onSubmit = async (e) => {
     e.preventDefault()
+    console.log(this.state.input)
     const data = await search(this.state.input)
+    console.log(data)
     const newData = data.data.articles
     this.setState({
       news:newData
@@ -48,6 +52,7 @@ class App extends React.Component {
       searchPage:false
     })
   }
+  // got code from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
   myFunction() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
@@ -58,12 +63,10 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state.news)
     return (
       <div className="App">
-
         <Header />
-        
-
         <div className="navDiv">
           <nav>
             <Hamburger myFunction={this.myFunction}/>
@@ -75,18 +78,17 @@ class App extends React.Component {
             <Link to="/sports" onClick={this.onFalseClick}>Sports</Link>
             <Link to="/finance" onClick={this.onFalseClick}>Finance</Link>
             <Link to="/world" onClick={this.onFalseClick}>World</Link>
-
           </nav>
           <div class="topnav">
       
-      <div id="myLinks">
-        <a href="/" class="active">Homepage</a>        
-        <a href="/sports">Sports</a>
-        <a href="/finance">Finance</a>
-        <a href="/world">World</a>
-      </div>
+            <div id="myLinks">
+              <a href="/" className="active">Homepage</a>        
+              <a href="/sports">Sports</a>
+              <a href="/finance">Finance</a>
+              <a href="/world">World</a>
+            </div>
 
-      </div>
+          </div>
         </div>
         <Daily search={this.state.searchPage} />
         <RenderSearch
