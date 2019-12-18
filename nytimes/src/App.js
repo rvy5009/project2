@@ -10,6 +10,7 @@ import Search from "./components/search"
 import Daily from './components/daily'
 import RenderSearch from "./components/rendersearch"
 import { search } from "./services/api"
+import Hamburger from './components/hamburger';
 class App extends React.Component {
   constructor() {
     super()
@@ -61,18 +62,8 @@ class App extends React.Component {
       <div className="App">
 
         <Header />
-        
-        <div class="topnav">
-  <a href="#home" class="active">Logo</a>
-  <div id="myLinks">
-    <a href="/sports">News</a>
-    <a href="/">Contact</a>
-    <a href="#about">About</a>
-          </div>
-          <a href="javascript:void(0);" class="icon" onClick={this.myFunction}>
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+        <Hamburger myFunction={this.myFunction}/>
+
         <div className="navDiv">
           <nav>
             <Search onSearch={this.onSearch}
