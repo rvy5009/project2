@@ -47,6 +47,14 @@ class App extends React.Component {
       searchPage:false
     })
   }
+  myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
 
   render() {
     return (
@@ -54,7 +62,17 @@ class App extends React.Component {
 
         <Header />
         
-
+        <div class="topnav">
+  <a href="#home" class="active">Logo</a>
+  <div id="myLinks">
+    <a href="/sports">News</a>
+    <a href="/">Contact</a>
+    <a href="#about">About</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onClick={this.myFunction}>
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
         <div className="navDiv">
           <nav>
             <Search onSearch={this.onSearch}
