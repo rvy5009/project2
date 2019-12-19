@@ -20,7 +20,6 @@ class MainPage extends React.Component {
   }
 
   render() {
-    // console.log(this.state.articles)
     return (
       
       <div>
@@ -62,7 +61,7 @@ class MainPage extends React.Component {
 
             </div>
             <div className=" inner3">
-              {this.state.articles.slice(7, 8).map((article, key) =>
+              {this.state.articles.slice(2, 3).map((article, key) =>
                 <div className="article3Word" key={key}>
                   <div className="inner3Text">
                     <a
@@ -86,7 +85,7 @@ class MainPage extends React.Component {
             
             <div className="searchDiv">
               <div className="outerSearch">
-                {this.state.articles.map((article, key) =>
+                {this.state.articles.slice(5,20).map((article, key) =>
                   <div className="innerSearch" key={key}>
                     <div className="search">
                       <a
