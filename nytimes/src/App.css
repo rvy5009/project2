@@ -281,6 +281,7 @@ h2{
   position: absolute;
   top:20px;
   float: left;
+  margin: 10px 0 0 0;
 }
 #topnav #myLinks {
   display: none;
