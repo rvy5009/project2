@@ -352,6 +352,10 @@ h2{
     margin:5px; 
     border-bottom: 1px solid black; 
     border-color: rgba(0, 0, 0, 0.1); 
+    padding: 10px;
+  }
+  .title2Page{
+    padding: 5px
   }
   .h2Page{
     border: none;
@@ -360,7 +364,7 @@ h2{
     display: block;
   }
   .img3Page{
-    width: 40vw;
+    width: 70vw;
     height: 30vh;
   }
   #topnav{
@@ -368,4 +372,16 @@ h2{
     top:20px;
     float: left;
   }
+  h1{
+    margin: 25px;
+  }
+  .date{
+    height: 20px;
+    margin:-20px 0 0 0;
+    padding: 5px;
+  }
+  h2{
+    margin:-10px;
+  }
+  
 }
