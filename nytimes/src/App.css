@@ -397,8 +397,19 @@ h2{
     margin: 0;
     height: 15vh;
   }
+  .innerSearch:first-child{
+    border: none;
+  }
   .inner1, .inner2, .inner3{
     display: none;
   }
-
+  .outerSearch{
+    border:none;
+  }
+  .outer{
+    border: none;
+  }
+  .date{
+    border: none;
+  }
 }
