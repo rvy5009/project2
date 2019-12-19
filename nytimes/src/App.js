@@ -50,13 +50,14 @@ class App extends React.Component {
       searchPage: false
     })
   }
+  
   // got code from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
-  myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+  hamburger() {
+    var ham = document.getElementById("myLinks");
+    if (ham.style.display === "block") {
+      ham.style.display = "none";
     } else {
-      x.style.display = "block";
+      ham.style.display = "block";
     }
   }
   mouseOut() {
@@ -67,7 +68,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Hamburger myFunction={this.myFunction} onMouseEnter={this.mouseEnter} />
+        <Hamburger hamburger={this.hamburger} onMouseEnter={this.mouseEnter} />
         <div className="navDiv">
             <Search onSearch={this.onSearch}
               onSubmit={this.onSubmit}

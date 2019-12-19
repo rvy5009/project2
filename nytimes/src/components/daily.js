@@ -28,7 +28,7 @@ class Daily extends React.Component {
               <div className=" inner1Daily">
               {this.state.articles.slice(0, 3).map((article, key) =>
                 <div className="articleWPicDaily" key={key}>
-                  <img className="imgDaily" src={article.urlToImage} alt="pictured" />
+                  {article.urlToImage && <img className="imgDaily" src={article.urlToImage} alt="pictured" />}
                   <div className="art1Daily">
                     <a className="titleDaily" href={article.url} >{article.title}</a>  
                   </div>
