@@ -316,6 +316,12 @@ h2{
   position: absolute;
   margin:5px;
 }
+.searchInput{
+  position: absolute;
+  top:0;
+  left:20px;
+  margin:5px;
+}
 
 
 @media (max-width: 810px){

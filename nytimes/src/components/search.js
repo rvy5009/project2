@@ -11,7 +11,7 @@ class Search extends React.Component{
   
   render() {
     return (
-      <div>
+      <div className="searchInput"> 
       
       <form onSubmit={this.props.onSubmit} >
         <input type="text" placeholder="search News" onChange={this.props.handleChange}/>

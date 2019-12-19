@@ -69,12 +69,12 @@ class App extends React.Component {
         <Header />
         <Hamburger myFunction={this.myFunction} onMouseEnter={this.mouseEnter} />
         <div className="navDiv">
-
-          <nav>
             <Search onSearch={this.onSearch}
               onSubmit={this.onSubmit}
               handleChange={this.handleChange}
               searched={this.state.searchPage} />
+          <nav>
+
             <Link to="/" onClick={this.onFalseClick}>HomePage</Link>
             <Link to="/sports" onClick={this.onFalseClick}>Sports</Link>
             <Link to="/finance" onClick={this.onFalseClick}>Finance</Link>
