@@ -390,10 +390,15 @@ h2{
     display: none;
   }
   .imgSearch{
-    height: 20vh;
+    height: 10vh;
+    width:20vw
   }
   .innerSearch{
     margin: 0;
-    height: 20vh;
+    height: 15vh;
   }
+  .inner1, .inner2, .inner3{
+    display: none;
+  }
+
 }
