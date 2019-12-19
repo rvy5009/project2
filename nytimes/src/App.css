@@ -380,8 +380,20 @@ h2{
     margin:-20px 0 0 0;
     padding: 5px;
   }
-  h2{
-    margin:-10px;
+  .searchDiv{
+    margin:-30px 0 0 0;
   }
-  
+  .outersearch{
+    margin:0
+  }
+  .searchDes{
+    display: none;
+  }
+  .imgSearch{
+    height: 20vh;
+  }
+  .innerSearch{
+    margin: 0;
+    height: 20vh;
+  }
 }

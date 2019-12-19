@@ -22,7 +22,8 @@ class RenderSearch extends React.Component{
                     rel="noopener noreferrer" >
                     {article.title}
                   </a><br></br>
-                {article.description}  
+
+                  <p className="searchDes">{article.description}</p>  
                 </div>
                 
                 {article.urlToImage && <img className="imgSearch" src={article.urlToImage} alt="pictured" />}
