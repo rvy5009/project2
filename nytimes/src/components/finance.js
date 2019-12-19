@@ -13,7 +13,6 @@ class Finance extends React.Component {
 
   async componentDidMount() {
     const data = await fetchFinance()
-    console.log(data)
     let newData = data.data.articles
     this.setState({
       articles: newData

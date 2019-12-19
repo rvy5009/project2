@@ -21,6 +21,11 @@ export const fetchFinance = async () => {
   let data = axios.get(`https://newsapi.org/v2/everything?q=finance&from=2019-12-18&sortBy=publishedAt&apiKey=dd76a03ead794c4e9e9f4c39be2b286e`)
   return data
 }
+export const fetchWorld = async () => {
+  let data = axios.get(`https://newsapi.org/v2/everything?q=world&from=2019-12-18&sortBy=publishedAt&apiKey=dd76a03ead794c4e9e9f4c39be2b286e`)
+  return data
+}
+
 export const search = async (input) => {
   let data = axios.get(`https://newsapi.org/v2/everything?q=${input}&from=2019-12-18&sortBy=publishedAt&apiKey=dd76a03ead794c4e9e9f4c39be2b286e`)
   return data
