@@ -56,7 +56,8 @@ class Sports extends React.Component {
                 <div className="articleWordPicPage" key={key}>
                   {article.urlToImage && <img className="img3Page" src={article.urlToImage} alt="pictured" />}
                   <a className="title2Page" href={article.url} target="_blank"
-                        rel="noopener noreferrer">{article.title}</a>
+                    rel="noopener noreferrer">{article.title}</a>
+                  <div className="inner3PageContent">{article.content}</div>
             
                 </div>
               )}

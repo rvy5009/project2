@@ -21,7 +21,7 @@ class Daily extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="outestDaily">
         {!this.props.search &&
           <div>
             <div className="outerDaily">

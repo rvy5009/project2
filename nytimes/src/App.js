@@ -67,10 +67,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
+        <Hamburger myFunction={this.myFunction} onMouseEnter={this.mouseEnter} />
         <div className="navDiv">
 
           <nav>
-            <Hamburger myFunction={this.myFunction} onMouseEnter={this.mouseEnter} />
+            {/* <Hamburger myFunction={this.myFunction} onMouseEnter={this.mouseEnter} /> */}
             <Search onSearch={this.onSearch}
               onSubmit={this.onSubmit}
               handleChange={this.handleChange}

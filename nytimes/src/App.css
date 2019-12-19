@@ -157,7 +157,9 @@ h2{
   font-weight: bold;
   font-size: 15px;
   text-align: center;
+ 
 }
+
 .h2Page{
   border-bottom: 1px solid black;
   border-color: rgba(0, 0, 0, 0.1);
@@ -300,4 +302,57 @@ h2{
 }
 .icon:hover{
   cursor: pointer;
+}
+
+.hamburger{
+  display: none;
+}
+
+.inner3PageContent{
+  display:none
+}
+@media (max-width: 810px){
+  nav{
+    display:none
+  }
+  .hamburger{
+    display: block;
+    float: left;
+    top: 0px;
+    position: absolute;
+    margin:5px;
+  }
+  .outestDaily{
+    display: none;
+  }
+  .inner1Page{
+    display: none;
+  }
+  .inner2Page{
+    display: none;
+  }
+  .inner3Page{
+    display: flex;
+    flex-direction: column;
+  }
+  .articleWordPicPage{
+    margin:5px; 
+    border-bottom: 1px solid black; 
+    border-color: rgba(0, 0, 0, 0.1); 
+  }
+  .h2Page{
+    border: none;
+  }
+  .inner3PageContent{
+    display: block;
+  }
+  .img3Page{
+    width: 40vw;
+    height: 30vh;
+  }
+  #topnav{
+    position: absolute;
+    top:20px;
+    float: left;
+  }
 }
